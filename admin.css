@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width:100%;
+    background-color: #E5E7EB;
+    position: relative;
+    display: flex;
+}
+ 
+#menu{
+    background: #ffffff;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+}
+#menu .logo{
+    display:flex;
+    align-items:center;
+    color: #fff;
+    padding: 30px 0 0 30px;
+}
+#menu .logo img{
+    width:200px;
+}
+#menu .items{
+    margin-top: 20px;
+}
+ 
+#menu .items li:hover{
+    background: rgba(194, 194, 194, 0.76);
+    cursor: pointer;
+}
+#menu .items li{
+    list-style: none;
+    padding: 15px 0;
+} 
+#menu .items li i{
+    color: rgba(53, 149, 204, 0.808);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+#menu .items li:hover i,
+#menu .items li:hover a{
+    color: #ec9d0a;
+}
+#menu .items li a{
+    text-decoration: none;
+    color: rgb(55, 190, 107);
+    font-weight: 300px;
+    font-weight: bolder;
+    transition: 0.3 ease;
+}
+#interface{
+    width: calc(100% - 300px);
+    margin-left:300px;
+    position: relative;
+}
+#interface .navigation{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding:15px 30px;
+    border-bottom: 2px solid #333;
+    position: fixed;
+    width: calc(100% - 300px);
+}
+#interface .navigation .search{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius:4px;
+}
+#interface .navigation .search i{
+    margin-right: 14px;
+}
+#interface .navigation .search input{
+    border:none;
+    outline:none;
+    font-size:14px;
+}
+.n1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#menu-btn{
+    color: #2b2b2b;
+    font-size:20px;
+    cursor:pointer;
+    margin-right: 20px;
+}
+.i-name{
+    color:#444a53;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top:70px;
+}
+.values{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.values .val-box{
+    background: #fff;
+    width: 300px;
+    height: 100px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin:20px 0 10px 0;
+}
+.values .val-box i{
+    font-size:25px;
+    width:60px;
+    height:60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    margin-right: 15px;
+}
+.values .val-box:nth-child(1) i{
+    background:#78e08f;
+}
+.values .val-box:nth-child(2) i{
+    background:#eb2f06;
+}
+.values .val-box:nth-child(3) i{
+    background:#b71540;
+}
+.values .val-box:nth-child(4) i{
+    background:#079992;
+}
+.values .val-box:nth-child(5) i{
+    background:#3c40c6;
+}
+.values .val-box:nth-child(6) i{
+    background:#fd79a8;
+}
+.values .val-box:nth-child(7) i{
+    background:#fdcb6e;
+}
+.values .val-box:nth-child(8) i{
+    background:#e17055;
+}
+.values .val-box:nth-child(9) i{
+    background:#2d3436;
+}
+.values .val-box h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.values .val-box span{
+    font-size:15px;
+    font-weight: 600;
+}
+ 
+@media (max-width: 769px){
+    #menu{
+        width:270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3 ease;
+    }
+    #menu.active{
+        left:0px;
+    }
+    #menu-btn{
+        display:initial;
+    }
+    #interface{
+        width: 100%;
+        margin-left: 0px;
+        display:inline-block;
+    }
+    #menu.active~#interface{
+        width: calc(100% - 270px);
+        margin-left:270px;
+        transition: 0.3 ease;
+    }
+    #interface .navigation{
+        width:100%;
+    }
+    .values{
+        padding: 30px 30px 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .values .val-box{
+        padding: 16px 20px;
+        margin:30px 20px 10px 0;
+    }
+}
+@media (max-width: 477px){
+    #interface .navigation{
+        padding:15px;
+    }
+    #interface .navigation .search input{
+        width: 150px;
+    }
+    .i-name{
+        padding: 30px 15px 0 15px;
+    }
+    .values{
+        padding: 15px 15px 0 15px;
+    }
+    .values .val-box{
+        width:100%;
+        margin: 8px 0;
+    }
+}
